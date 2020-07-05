@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SAM.HealthCare.Domain.Entities;
 
 namespace SAM.HealthCare.Infrastructure.DatabaseContext
 {
@@ -8,5 +9,6 @@ namespace SAM.HealthCare.Infrastructure.DatabaseContext
         {
 
         }
+        public DbSet<Company> Companies { get; set; }
     }
 }

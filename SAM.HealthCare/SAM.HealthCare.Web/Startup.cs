@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SAM.HealthCare.Infrastructure.DatabaseContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace SAM.HealthCare.Web
 {
@@ -31,6 +33,7 @@ namespace SAM.HealthCare.Web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddDbContext<HealthCareDbContext>(options => options.UseSqlServer(Configuration["DefaultConnection:ConnectionString"]));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
