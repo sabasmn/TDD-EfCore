@@ -5,9 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
     <PackageReference Include="xunit" Version="2.2.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SAM.HealthCare.Domain\SAM.HealthCare.Domain.csproj" />
+    <ProjectReference Include="..\SAM.HealthCare.Infrastructure\SAM.HealthCare.Infrastructure.csproj" />
+    <ProjectReference Include="..\SAM.HealthCare.Services\SAM.HealthCare.Services.csproj" />
   </ItemGroup>
 
 </Project>

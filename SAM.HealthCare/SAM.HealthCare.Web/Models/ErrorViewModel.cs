@@ -1,5 +1,3 @@
-using System;
-
 namespace SAM.HealthCare.Web.Models
 {
     public class ErrorViewModel
